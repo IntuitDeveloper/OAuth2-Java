@@ -4,14 +4,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.0.RELEASE")
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 jar {
     baseName = 'auth2-java'
@@ -37,11 +38,13 @@ dependencies {
     compile("org.apache.httpcomponents:httpcore")
     compile("org.apache.httpcomponents:httpclient")   
     compile("org.json:json")
-    compile("log4j:log4j")
+    compile("log4j:log4j:1.2.17")
+    compile (group: 'ant', name: 'ant', version: '1.7.0')
+    compile group: 'org.json', name: 'json', version: '20180813'
     testCompile('org.springframework.boot:spring-boot-starter-test')
   
 }
 
-task wrapper(type: Wrapper) {
+wrapper {
     gradleVersion = '2.3'
 }
