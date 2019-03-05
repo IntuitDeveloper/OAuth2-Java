@@ -9,7 +9,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
  *
  */
 @SpringBootApplication
-public class Application extends RepositoryRestMvcConfiguration {
+public class Application {
 
     /**
      * @param args
