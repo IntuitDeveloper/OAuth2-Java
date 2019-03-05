@@ -37,7 +37,6 @@ dependencies {
     compile("commons-lang:commons-lang:2.6")
     compile("org.apache.httpcomponents:httpcore")
     compile("org.apache.httpcomponents:httpclient")   
-    compile("org.json:json")
     compile("log4j:log4j:1.2.17")
     compile (group: 'ant', name: 'ant', version: '1.7.0')
     compile group: 'org.json', name: 'json', version: '20180813'
